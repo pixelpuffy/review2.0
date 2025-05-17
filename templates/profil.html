@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="flex justify-center">
+    <div><img class="rounded-full border-sky-200 border-5 m-3/5" src="{{utilisateur.avatar}}"></div>
+    <div class="text-center mx-6 text-xl list-disc"><p class=""> {{utilisateur.pseudo}}!</p>
+    <p>Age : {{utilisateur.age}} </p></div>
+</div>
+{% endblock %}
+
+

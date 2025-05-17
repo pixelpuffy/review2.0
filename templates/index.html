@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Bloc correspondant à TOUTES les annonces -->
+<div class="flex flex-wrap justify-center ">
+    {% for annonce in annonces %}
+    <!-- Bloc correspondant à UNE annonce -->
+    <a href="/annonce">
+    <div class="bg-white w-96 size-42 border-2 border-black rounded-md p-4 m-2">
+        <p class="text-2xl font-bold text-center">{{annonce.titre}}</p>
+        <img src="{{annonce.image}}" class="h-96 w-full h-32 mx-auto object-cover ">
+        <p class="m-full h-80 text-wrap flex flex-wrap">{{annonce.description}}</p>
+        <p class="italic text-center">Posté par : {{annonce.auteur}}</p>
+        <p class="italic text-center">Le : {{annonce.date.strftime("%d/%m/%Y  à  %H : %M")}}</p>
+    </div>
+    </a>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

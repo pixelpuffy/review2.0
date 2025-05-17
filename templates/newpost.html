@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="/nouvelle-annonce" method="POST">
+    <!-- Bloc "titre" -->
+    <div>
+        <label>Titre</label>
+        <input type="text" name="input_titre" class="border-2 border-black">
+    </div>
+    <!-- Bloc "description" -->
+    <div>
+        <label>Description</label>
+        <input type="text" name="input_description" class="border-2 border-black">
+    </div>
+    <!-- Bloc "image" -->
+    <div>
+        <label>Image</label>
+        <input type="text" name="input_image" class="border-2 border-black">
+    </div>
+    <!-- Bouton poster une annonce -->
+    <button type="submit" class="bg-blue-200 p-3 rounded-full hover:bg-blue-400">Poster</button>
+</form>
+
+{% endblock %}

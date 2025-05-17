@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <form action="/register" method="post">
+   <div class="flex space-x-4 flex-col ">
+
+     <div class="mr-2">
+       <label>pseudo</label>
+       <input name="input_pseudo" class="border-2 border-black" type="text">
+     </div>
+
+
+     <div class="mr-2">
+       <label>mot de passe</label>
+       <input name="input_mdp" class="border-2 border-black" type="password">
+     </div>
+
+
+     <div class="mr-2">
+        <label>avatar</label>
+        <input name="input_avatar" class="border-2 border-black" type="text">
+      </div>
+
+
+     <div class="mr-5">
+       <button class="shadow-grey-500 rounded-lg p-2 bg-blue-200 hover:bg-blue-400" type="submit"> créer un compte </button>
+     </div>
+     
+   </div> 
+ </form>
+{% endblock %}

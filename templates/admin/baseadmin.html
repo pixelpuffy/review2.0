@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black">
+    <header class="bg-pink-200 mb-5 flex justify-between">
+
+        <h1 class="m-6 text-6xl front-sherif text-pink-500">ℬℴℴ𝓀 𝓇ℯ𝓋𝒾ℯ𝓌</h1>
+
+        <nav classe=" mt-12 mr-8">
+            <ul class="text-3xl text-pink-500 flex space-x-8 my-6 mx-12">
+                <li><a href="/">🕮</a></li>
+                {% if utilisateur %}
+                <li><a href="/nouvelle-annonce">𓂃🖊</a></li>
+                <li><a href="/logout">𓏵</a></li>
+                {% else %}
+                <li><a href="/register">𝕽𝖊𝖌𝖎𝖘𝖙𝖊𝖗</a></li>
+                <li><a href="/login">𝕮𝖔𝖓𝖓𝖊𝖈𝖙𝖎𝖔𝖓</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% if utilisateur%}
+        <a href="/profil"><img class="rounded-full mr-6 my-5 mb-6 ml-6  w-24 h-24" src="{{utilisateur.avatar}}"></a>        
+        {% endif %}
+
+    </header>
+    <main class="bg-[url('../static/pink-flowers.jpg')] my-12 opacity-75 rounded-lg w-4/5 mx-auto p-12 shadow-2xl shadow-pink-600">
+        <p class="text-red-500 front-bold my-5 ">{{erreur}}</p>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+</body>
+</html>
